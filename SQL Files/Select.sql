@@ -90,4 +90,24 @@ SELECT count(marks) FROM student;
 
 SELECT city, count(name) FROM student GROUP BY city;
 
+# Having Clause 
+# Same as Where clause
 
+# Where use in rows but having use in groups
+
+SELECT count(name), city FROM student GROUP BY city HAVING max(marks) > 90;
+
+-- General Order
+-- SELECT column(s)
+-- FROM table_name
+-- WHERE condition
+-- GROUP BY column(s)
+-- HAVING condit﻿ion
+-- ORDER BY column(s) ASC;
+
+SELECT city 
+FROM student
+WHERE grade = "A"
+GROUP BY city
+HAVING max(marks) > 90
+ORDER BY city ASC;
