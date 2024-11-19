@@ -1,56 +1,49 @@
-
 /* create a database */
 CREATE DATABASE college;  
 
-# Delete a database
+# Delete a database (commented out)
 # DROP DATABASE college;
-/* use a database */
+
+/* use the created database */
 USE college;
 
-
-/* create a table 
-design column-> column_name datatype constraint 
-*/
+/* create a table named 'student' with columns id, name, and age */
 CREATE TABLE student(
 id INT PRIMARY KEY,
 name VARCHAR(50),
 age INT NOT NULL
 );
 
-/* insert data in database */
+/* insert data into the 'student' table */
 INSERT INTO student VALUES(1, "MEHEDI", 20);
 INSERT INTO student VALUES(2, "TONY", 26);
 INSERT INTO student VALUES(3, "PETER", 23);
 
-/* print the table */
+/* retrieve and display all data from the 'student' table */
 SELECT * FROM student;
 
-# when create a database-> check if a database exists which has same name
-
+/* create a database only if it does not already exist */
 CREATE DATABASE IF NOT EXISTS college;
 
-# when delete a database-> check if a database exists of given name
-
+/* delete a database only if it exists */
 DROP DATABASE IF EXISTS temp;
 
-# show available databases
-
+/* show all available databases */
 SHOW DATABASES;
 
-# show all the tables of used database
-
+/* show all tables in the currently used database */
 SHOW TABLES;
 
-# delete a table
+/* delete the 'student' table (commented out) */
 # DROP TABLE student;
 
+/* create a table named 'class' with columns rollno and name */
 CREATE TABLE class(
  rollno INT PRIMARY KEY,
  name VARCHAR(50)
 );
 
-# Multiple rows insert at a time
-
+/* insert multiple rows into the 'class' table at once */
 INSERT INTO class
 (rollno, name)
 VALUES
@@ -58,4 +51,5 @@ VALUES
 (102, "KEVIN"),
 (103, "ISAK");
 
+/* retrieve and display all data from the 'class' table */
 SELECT * FROM class;
